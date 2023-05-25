@@ -1,0 +1,1381 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+
+/*---MOBILE FIRST---*/
+/* ---GENERAL OPTIONS--- */
+:root {
+    /*========== Colors ==========*/
+    --mainColor: #cfb53b;
+    --silver: #c0c0c0;
+    --white: #fff;
+    --darker: rgba(0, 0, 0, 0.55);
+    --bgColor: rgb(15, 15, 15);
+    --btn-bgcolor: rgba(255, 255, 255, 0.06);
+
+    /*========== Font ==========*/
+
+    --h4-fsize: clamp(1.375rem, calc(1.25rem + 1vw), 2.125rem);
+    --h3-fsize: clamp(1.375rem, calc(1.25rem + 1vw), 2.125rem);
+    --h2-fsize: clamp(1.875rem, calc(1.875rem + 1.5vw), 3.375rem);
+    --h1-fsize: clamp(2.375rem, calc(1.75rem + 4vw), 4.375rem);
+
+    --span-large-fsize: clamp(1.225rem, calc(1rem + 1vw), 1.875rem);
+    --span-normal-fsize: clamp(1rem, calc(-1.25rem + 4vw), 1.5rem);
+    --basic-fsize: 1.1rem;
+
+    --fstyle-play: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--silver);
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---END GENERAL OPTIONS--- */
+
+/* ---STYLE TEMPLATES--- */
+.container {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--h1-fsize);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: var(--h2-fsize);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: var(--h3-fsize);
+    letter-spacing: 0.1rem;
+    margin: .4rem 0 1.5rem 0;
+}
+
+h4 {
+    font-size: var(--h4-fsize);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: .4rem 0 1rem 0;
+}
+
+p {
+    font: var(--basic-fsize) var(--fstyle-play);
+    text-align: center;
+    letter-spacing: 0.1rem;
+    flex-wrap: wrap;
+    margin: .8rem 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.text--golden {
+    color: var(--mainColor);
+}
+
+.text--golden-glow {
+    color: var(--mainColor);
+    filter: drop-shadow(0 0 0.3rem var(--mainColor));
+}
+
+.username--shadow {
+    filter: drop-shadow(0 0.4rem 0.3rem rgb(0, 0, 0));
+    margin: 0;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+ul li {
+    list-style: none;
+}
+
+.icon {
+    margin: 0.2rem auto;
+    height: 60px;
+    width: 60px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--silver);
+}
+
+/* ---END STYLE TEMPLATES--- */
+/* ---Background animation -> Team section ----------- */
+.bg_animation--crosses {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg_animation--crosses .bg-animation_item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.6);
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.bg-animation_item:nth-child(1) {
+    top: 28%;
+    left: 13%;
+    animation: bg_animation--crosses 6s linear infinite;
+}
+
+.bg-animation_item:nth-child(2) {
+    top: 66%;
+    left: 8%;
+    animation: bg_animation--crosses 8s linear infinite;
+}
+
+.bg-animation_item:nth-child(3) {
+    top: 87%;
+    left: 50%;
+    animation: bg_animation--crosses 8s linear infinite;
+}
+
+.bg-animation_item:nth-child(4) {
+    top: 40%;
+    left: 60%;
+    animation: bg_animation--crosses 8s linear infinite;
+}
+
+.bg-animation_item:nth-child(5) {
+    top: 68%;
+    left: 88%;
+    animation: bg_animation--crosses 9s linear infinite;
+}
+
+.bg-animation_item:nth-child(6) {
+    top: 78%;
+    left: 70%;
+    animation: bg_animation--crosses 9s linear infinite;
+}
+
+.bg-animation_item:nth-child(7) {
+    top: 45%;
+    left: 83%;
+    animation: bg_animation--crosses 7s linear infinite;
+}
+
+.bg-animation_item:nth-child(8) {
+    top: 33%;
+    left: 38%;
+    animation: bg_animation--crosses 10s linear infinite;
+}
+
+.bg-animation_item:nth-child(9) {
+    top: 87%;
+    left: 15%;
+    animation: bg_animation--crosses 10s linear infinite;
+}
+
+.bg-animation_item:nth-child(10) {
+    top: 22%;
+    left: 72%;
+    animation: bg_animation--crosses 6s linear infinite;
+}
+
+.bg-animation_item:nth-child(11) {
+    top: 93%;
+    left: 81%;
+    animation: bg_animation--crosses 8s linear infinite;
+}
+
+.bg-animation_item:nth-child(12) {
+    top: 90%;
+    left: 35%;
+    animation: bg_animation--crosses 5s linear infinite;
+}
+
+.bg-animation_item:nth-child(13) {
+    top: 49%;
+    left: 20%;
+    animation: bg_animation--crosses 6s linear infinite;
+}
+
+.bg-animation_item:nth-child(14) {
+    top: 60%;
+    left: 50%;
+    animation: bg_animation--crosses 10s linear infinite;
+}
+
+.section-intro {
+    margin: 1.5rem 0;
+}
+
+/* circle background effect*/
+.circle-bg {
+    position: relative;
+}
+
+.circle-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg,
+            #00000099,
+            #cfb43b80);
+    clip-path: circle(17% at right 83%);
+    animation: circle-moveup 7s ease-in-out infinite;
+}
+
+.circle-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            #00000099,
+            #cfb43b80);
+    clip-path: circle(17% at left 53%);
+    z-index: -1;
+    animation: circle-moveup 9s ease-in-out infinite;
+}
+
+/* Glass card ---> Section: About, Contact */
+.glass-card-wrapper {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.6rem) saturate(180%);
+    border-radius: .6rem;
+    z-index: 1;
+}
+
+/* --- END STYLE TEMPLATES --- */
+
+/* <--- HEADER SECTION ---> */
+/* Style the header: fixed position (always stay at the top) */
+.header {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 100%;
+    height: 8px;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: .4rem;
+    background: var(--mainColor);
+    width: 0%;
+}
+
+/* ---NAVIGATION--- */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2rem 1rem;
+}
+
+/* background settings after hamburger opening */
+.nav-list ul {
+    position: absolute;
+    background-color: var(--bgColor);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .6s ease left;
+}
+
+.nav-list ul.active {
+    left: 0;
+}
+
+/* open hamburger - caption settings */
+.nav-list ul a {
+    font-size: var(--h4-fsize);
+    letter-spacing: .1rem;
+    color: var(--white);
+    padding: 2rem;
+    display: block;
+    text-transform: uppercase;
+    transition: .6s ease color;
+}
+
+/* open hamburger - effect for caption */
+.nav-list ul a::after {
+    content: attr(data-after);
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: var(--mainColor);
+    font-size: var(--h1-fsize);
+    letter-spacing: 2.5rem;
+    z-index: -1;
+    transition: .6s ease letter-spacing;
+}
+
+.nav-list ul li:hover a::after {
+    transform: translate(-50%, -60%) scale(1);
+    letter-spacing: initial;
+}
+
+.nav-list ul li:hover a {
+    color: var(--silver);
+}
+
+/* hamburger icon */
+.hamburger {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid var(--mainColor);
+    transform: scale(.8);
+    /*scale the hamburger icon for pulse animation */
+    z-index: 99;
+}
+
+/* hamburger icon - pulse animation */
+.hamburger::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--silver);
+    animation: hamburger_puls 1.6s ease infinite;
+}
+
+/* hamburger icon - straps */
+.hamburger .bar {
+    position: relative;
+    height: .125rem;
+    width: 1.6rem;
+    background-color: var(--mainColor);
+    z-index: -1;
+}
+
+.hamburger .bar::after,
+.hamburger .bar::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(243, 244, 247);
+    transition: .3s ease;
+}
+
+.hamburger .bar::after {
+    top: .5rem;
+}
+
+.hamburger .bar::before {
+    bottom: .5rem;
+}
+
+.hamburger.active .bar::before {
+    bottom: 0;
+}
+
+.hamburger.active .bar::after {
+    top: 0;
+}
+
+/* <---END HEADER---> */
+
+/* <---HOME---> */
+/*  background setting */
+.home {
+    background: url(./img/bg/bg-main-phone.jpg) no-repeat center/cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* Darkening background */
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darker);
+    z-index: -1;
+    filter: blur(1rem);
+}
+
+/*caption */
+.home_title {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: transparent;
+}
+
+/* Using animation to create the effect of changing the color of the caption
+on the home page(adding "nbsp" to html to create a space before the beginning of the text)*/
+.home_title::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--mainColor);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--mainColor);
+    animation: txtGlowAnimate 5s linear infinite;
+    filter: drop-shadow(0 0 0.2rem var(--mainColor)) drop-shadow(0 0 3rem var(--mainColor));
+}
+
+.home_subtitle {
+    font-size: var(--span-large-fsize);
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+/* Button directing to the contact form */
+.home_action {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: .7rem;
+    background-color: var(--btn-bgcolor);
+    border: 1px solid var(--mainColor);
+    border-radius: 2.5rem;
+    letter-spacing: 0.2rem;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.home_btn {
+    font-size: var(--span-normal-fsize);
+}
+
+/* Ripple effect */
+.home_action span {
+    position: absolute;
+    background: var(--silver);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animation-ripple 1.2s linear infinite;
+}
+
+/* <--- END HOME ---> */
+
+/* <---ABOUT US---> */
+.about_wrapper {
+    width: 95%;
+    gap: 1.7rem;
+    display: grid;
+    justify-items: center;
+    padding: 3rem 1rem;
+    max-width: 25rem;
+}
+
+/* counter design */
+.about_counter {
+    position: relative;
+    display: grid;
+    width: 85%;
+    max-width: 15rem;
+    filter: drop-shadow(0 .3rem 0.2rem rgb(0, 0, 0));
+    padding: 1rem;
+    transition: 1s;
+    border-radius: 50%;
+    border: 2px solid var(--mainColor);
+    border-bottom: 12px solid var(--mainColor);
+    z-index: 1;
+
+}
+
+.about_counter:hover {
+    transform: rotateX(35deg);
+    filter: drop-shadow(0 1.4rem 0.6rem rgba(0, 0, 0, 0.313));
+}
+
+.about_counter .num {
+    line-height: 2.3rem;
+    font-size: 2.3rem;
+    padding-bottom: .6rem;
+    border-bottom: 2px solid var(--mainColor);
+    width: 75%;
+    margin: auto;
+}
+
+.about_counter span.text {
+    margin: .6rem auto;
+    padding-bottom: .5rem;
+    font-size: var(--basic-fsize);
+}
+
+/* ---END ABOUT US--- */
+
+/* ---SERVICES--- */
+.services_wrapper {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 20rem;
+    gap: 2.7rem;
+}
+
+/* design of the cards */
+.services_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--mainColor);
+    box-shadow: 0px 0px 10px 0px var(--mainColor);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.services_content .services_price {
+    font: 3rem var(--fstyle-play);
+    margin-top: auto;
+    letter-spacing: 0.2rem;
+}
+
+.services_content:nth-child(1):hover {
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(16, 16, 16, 0.5) 100%),
+        url(./img/bg/bg-service-hover-haircut.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.services_content:nth-child(2):hover {
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(16, 16, 16, 0.5) 100%),
+        url(./img/bg/bg-service-hover-razor.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.services_content:nth-child(3):hover {
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(16, 16, 16, 0.4) 100%),
+        url(./img/bg/bg-service-hover-beard.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.services_content:nth-child(4):hover {
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(16, 16, 16, 0.4) 100%),
+        url(./img/bg/bg-service-hover-combo.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.services_content:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0px 6px 12px 0px var(--mainColor);
+    color: var(--white);
+}
+
+/* ---END SERVICES--- */
+
+/*---TEAM <---*/
+.team {
+    position: relative;
+}
+
+.team_wrapper {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    row-gap: 10rem;
+}
+
+.team_content {
+    position: relative;
+    width: 95%;
+    max-width: 15rem;
+    height: 25rem;
+}
+
+/* shadow effect under the hexagon shape */
+.team_content::before {
+    content: "";
+    position: absolute;
+    bottom: -6.25rem;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: radial-gradient(rgba(0, 0, 0, 0.503), transparent, transparent);
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.team_content:hover::before {
+    opacity: .7;
+    transform: scale(0.8);
+}
+
+/* setting up the hexagon shape */
+.team_hexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: .5s;
+}
+
+.team_content:hover .team_hexagon {
+    transform: translateY(-30px);
+}
+
+.team_hexagon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* setting up the info box */
+.team_content .team_hexagon .team_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6rem 1rem 4rem 1rem;
+    background: linear-gradient(180deg, var(--darker) 0%, #cda908 100%);
+    color: var(--white);
+    opacity: 0;
+    transition: .5s;
+}
+
+.team_content:hover .team_info {
+    opacity: 1;
+    color: var(--white);
+}
+
+.team_content .social-media {
+    position: relative;
+    display: flex;
+}
+
+/* creating the effect of icons appearing on hover
+with a delay created based on the "--i" that was 
+ created in html */
+.team_content .social-media li {
+    margin: 0.6rem;
+    transform: translateY(6rem);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    z-index: -1;
+}
+
+.team_content:hover .social-media li {
+    transform: translateY(0);
+    transition: 0.5s;
+    opacity: 1;
+    transition-delay: calc(0.1s * var(--i));
+    z-index: 1;
+}
+
+.team_content .social-media li a {
+    color: var(--white);
+    filter: drop-shadow(0 0.4rem 0.3rem rgb(0, 0, 0));
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+/*--- END TEAM <---*/
+
+.testimonial {
+    padding: 0;
+}
+
+.testimonial_wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.testimonial_content {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    padding: 0 1.4rem;
+}
+
+.stars {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--mainColor);
+    margin: .5rem auto;
+}
+
+.quote {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: var(--mainColor);
+    font-size: 2.5rem;
+}
+
+.testimonial_user {
+    margin: auto;
+}
+
+.testimonial_content img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 2px solid var(--mainColor);
+    object-fit: cover;
+    margin: 1rem auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    margin-top: auto;
+    font-weight: bold;
+    font-size: var(--h3-fsize);
+    transition: 0.6s ease;
+    border: none;
+    user-select: none;
+    color: var(--silver);
+    background: transparent;
+    padding: .6rem;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover,
+.next:hover {
+    color: var(--mainColor);
+}
+
+/*---END TESTIMONIALS---*/
+
+/*---CONTACT---*/
+/* setting up background for contact section */
+.contact.circle-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-70deg,
+            #00000099,
+            #cfb43b80);
+    clip-path: circle(17% at right 54%);
+    animation: circle-moveup 7s ease-in-out infinite;
+}
+
+.contact.circle-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(70deg,
+            #00000099,
+            #cfb43b80);
+    clip-path: circle(17% at left 24%);
+    z-index: -1;
+    animation: circle-moveup 9s ease-in-out infinite;
+}
+
+.contact_wrapper {
+    width: 100%;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    z-index: 1;
+}
+
+/*---form---*/
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    max-width: 80rem;
+    padding: 1rem;
+}
+
+.form_field {
+    display: flex;
+    flex-direction: column;
+    margin: .3rem 0;
+    width: 90%;
+}
+
+.field-name {
+    font-size: var(--span-normal-fsize);
+    margin-top: .6rem;
+    margin-bottom: .3rem;
+    color: var(--mainColor);
+    text-transform: capitalize;
+}
+
+.field_input {
+    padding: .3rem;
+    font-size: var(--span-normal-fsize);
+    color: var(--silver);
+    outline: none;
+    border-style: none;
+    border-bottom: 1px solid var(--silver);
+    background: transparent;
+}
+
+.field_input:focus {
+    border-bottom: 1px solid var(--mainColor);
+    
+}
+
+/*---form auto fill transparent---*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--silver) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    transition-delay: 2592000s;
+} 
+
+.field_textarea {
+    padding: .6rem;
+    font-size: var(--span-normal-fsize);
+    color: var(--silver);
+    background: transparent;
+    outline: none;
+    border-style: none;
+    border: 1px solid var(--silver);
+    border-radius: .6rem;
+    resize: none;
+    min-height: 15rem;
+    margin: .6rem 0;
+}
+
+.field_textarea:focus{
+    border: 1px solid var(--mainColor);}
+
+.field_submit {
+    background: transparent;
+    color: var(--mainColor);
+    border: 1px solid var(--silver);
+    padding: .5rem;
+    border-radius: .6rem;
+    font-size: var(--span-normal-fsize);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.field_submit:hover {
+    border: 1px solid var(--mainColor);
+}
+
+.form_field ::placeholder {
+    color: rgba(192, 192, 192, 0.4);
+}
+
+/*---details---*/
+.contact_details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 1rem;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .6rem;
+}
+
+.contact_info i {
+    color: var(--mainColor);
+    font-size: var(--span-normal-fsize);
+}
+
+.contact_option {
+    color: var(--silver);
+    font-size: var(--span-normal-fsize);
+    margin: .6rem auto;
+}
+
+.contact_map {
+    padding: 0;
+    margin-bottom: 5rem;
+    width: 95%;
+    max-width: 80rem;
+    height: 45vh;
+}
+
+.contact_map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*---END CONTACT---*/
+
+/*-----FOOTER----- */
+.footer {
+    position: relative;
+    background: rgba(43, 43, 43, 0.2);
+    height: auto;
+    width: 100%;
+}
+
+.footer_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    padding: 1rem .5rem;
+}
+
+.footer_company {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.footer_brand {
+    margin: auto auto;
+    font-size: var(--basic-fsize);
+}
+
+.footer_logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.footer_social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.footer_social-media li {
+    margin: .8rem;
+}
+
+.footer_social-media a i {
+    color: var(--silver);
+    font-size: 1.6rem;
+    transition: 1.2s;
+}
+
+.footer_social-media a:hover i {
+    transform: rotateY(360deg);
+    color: var(--mainColor);
+}
+
+.footer_bottom {
+    width: 100%;
+}
+
+.copyrights {
+    font-size: .8rem;
+    margin: 0;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+/* <----- END FOOTER-----> */
+
+/* <--- ANIMATION ---> */
+
+/* Animation for circles located in the background
+involving changing their position */
+@keyframes circle-moveup {
+    0% {
+        top: 0;
+        right: 0;
+    }
+
+    50% {
+        top: -2%;
+        right: 2%;
+
+    }
+
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+
+/* Pulse animation for hamburger */
+@keyframes hamburger_puls {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* Animation for the crosses
+located at the background of the section "Team" */
+@keyframes bg_animation--crosses {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Animation applied to home h1 as an effect for the main caption */
+@keyframes txtGlowAnimate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+/* ripple animation used in the home section as an effect for the "home_btn" button */
+@keyframes animation-ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.3;
+    }
+
+    100% {
+        width: 250%;
+        height: 800%;
+        opacity: 0;
+    }
+}
+
+/* transition animation */
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* <--- END ANIMATION ---> */
+
+/* ---MEDIA--- */
+
+@media only screen and (min-width: 600px) {
+    .circle-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(20% at right 80%);
+        animation: circle-moveup 8s ease-in-out infinite;
+    }
+
+    .circle-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(20% at left 58%);
+        animation: circle-moveup 8s ease-in-out infinite;
+    }
+
+    .section-intro {
+        width: 80%;
+    }
+
+    /* ABOUT SECTION */
+    .about_wrapper {
+        width: 95%;
+        max-width: 40rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .about_counter {
+        width: 100%;
+    }
+
+    /* SERVICES SECTION */
+    .services_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        max-width: 40rem;
+        gap: 2.7rem 1.7rem;
+    }
+
+    /* TEAM SECTION */
+    .team_wrapper {
+        width: 95%;
+        max-width: 40rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team_content {
+        max-width: 20rem;
+    }
+
+    /* ---TESTIMONIALS--- */
+    .testimonial_wrapper {
+        width: 95%;
+    }
+
+    .testimonial_content {
+        height: 40vh;
+    }
+
+    /* ---CONTACT--- */
+    .contact_wrapper {
+        max-width: 40rem;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    :root {
+        --bgColor: rgb(12, 12, 12);
+    }
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .circle-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(20% at right 62%);
+        animation: circle-moveup 5s ease-in-out infinite;
+    }
+
+    .circle-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(20% at left 44%);
+        animation: circle-moveup 5s ease-in-out infinite;
+    }
+
+    .section-intro {
+        width: 50%;
+    }
+
+    /* ---HEADER--- */
+    .header .hamburger {
+        display: none;
+    }
+
+    .header .nav-list ul {
+        position: inherit;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .header .nav-list ul li {
+        display: inline-block;
+    }
+
+    .header .nav-list ul li a {
+        font-size: var(--basic-fsize);
+    }
+
+    .header .nav-list ul a::after {
+        display: none;
+    }
+
+    .nav-list ul a {
+        color: var(--silver);
+        padding: .3rem 1.2rem;
+        transition: transform .6s ease;
+    }
+
+    .nav-list ul li:hover a {
+        color: var(--mainColor);
+        transform: translateY(-.3rem);
+    }
+
+    /* ---HOME--- */
+    .home {
+        background: url(./img/bg/bg-main-4k.jpg) no-repeat right/cover fixed;
+    }
+
+    /* ---ABOUT--- */
+    .about_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 70rem;
+    }
+
+    /* ---SERVICES--- */
+    .services_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 45rem;
+        gap: 2.5rem;
+    }
+
+    /* ---TEAM--- */
+    .team_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 70rem;
+        column-gap: .5rem;
+    }
+
+    /* ---TESTIMONIALS--- */
+    .testimonial_wrapper {
+        width: 90%;
+        padding: auto;
+        ;
+    }
+
+    .testimonial_content {
+        margin: auto;
+        height: 40vh;
+    }
+
+    .testimonial_content img {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    /* ---CONTACT--- */
+    .contact_wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 70rem;
+        margin: auto;
+    }
+
+    .field_input {
+        padding: .8rem;
+    }
+
+    .contact_details {
+        height: fit-content;
+        width: 100%;
+    }
+}
+
+/* ---MEDIA--- */
